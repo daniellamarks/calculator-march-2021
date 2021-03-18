@@ -6,12 +6,12 @@ body {
     --color3: hsla(200, 61%, 56%, 1);
     --color4: hsla(187, 41%, 94%, 1);
     --color5: hsla(170, 28%, 95%, 1); */
-/* 
-    /* --color1: hsla(45, 86%, 83%, 1);
+
+    --color1: hsla(45, 86%, 83%, 1);
     --color2: hsla(135, 65%, 98%, 1);
     --color3: hsla(315, 37%, 86%, 1);
     --color4: hsla(45, 73%, 98%, 1);
-    --color5: hsla(224, 40%, 79%, 1); */
+    --color5: hsla(224, 40%, 79%, 1); 
     
     --header-height: 80px;
     --shadow: 0px 10px 20px -12px rgba(0,0,0,0.45);
@@ -28,10 +28,100 @@ main {
     justify-content: center;
     align-items: center;
     margin-bottom: calc(var(--footer-height));
+    /* font-size: 1.5em; */
 }
 
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.typewriter {
+        overflow: hidden; /* Ensures the content is not revealed until the animation */
+        border-right: .15em solid orange; /* The typwriter cursor */
+        white-space: nowrap; /* Keeps the content on a single line */
+        margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+        letter-spacing: .15em; /* Adjust as needed */
+        animation: 
+          typing 3.5s steps(40, end),
+          blink-caret .75s step-end infinite;
+      }
+      
+      /* The typing effect */
+      @keyframes typing {
+        from { width: 0 }
+        to { width: 40%}
+      }
+      
+      /* The typewriter cursor effect */
+      @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: orange; }
+      }
+
+
+.main-section div {
+   /* margin: 50px */
+}
+
+.inputs {
+    margin: 10px
+}
+.operator {
+    margin: 0px, 10px;
+    color: orange;
+    font-weight: 200px;
+}
+
+.answer {
+    font-size: 5em;
+    transition: transform 250ms;
+}
+
+.answer:hover {
+    transform: translateY(-10px);
+}
+
+/* span {
+    background-color: white;
+    border: 1px black solid;
+    padding: 10px;
+    min-width: 20px;
+    margin-left: 5px;
+} */
+
+input {
+    border-radius: 10px;
+    height: 2em; 
+}
+
+input:focus {
+    outline: none;
+}
+
+button {
+    border-radius: 5px;
+    padding: 5px;
+
+}
+
+button:hover {
+    color: orange;
+    border: orange 2px solid;
+    box-shadow: 0 6px 8px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+button:focus {
+    outline: none;
+}
+
+.answer {
+    color: orange;
+}
 section {
-    background-color: var(--color5);
+    /* background-color: var(--color5);
     width: 1000px;
     max-width: 80%;
     display: flex;
@@ -42,16 +132,22 @@ section {
     padding-bottom: var(--gutter);
     margin-top: var(--gutter);
     margin-bottom: var(--gutter);
-    border: solid 2px var(--color1);
+    border: solid 2px var(--color1); */
+    
+}
+
+section > * {
+    margin: 5px;
 }
 
 header {
     display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
+    justify-content: center;
+    margin-top: 50px;
+    /* background-color: var(--color3);
     height: var(--header-height);
-    box-shadow: var(--shadow);
-}
+    box-shadow: var(--shadow); */
+} 
 
 footer {
     display: flex;
@@ -59,44 +155,10 @@ footer {
     background-color: var(--color3);
     box-shadow: var(--shadow);
 }
-
-
-h2 {
-    font-size: 1.8rem;
-    font-weight: bold;
-}
-
-.gutter-right {
-    margin-right: 20px;
-}
-
-.main-logo {
-    animation: pulse 5s infinite ease-in-out;
-}
-
-header img {
-    height: var(--header-height);
-}
-
 
 
 content {
     width: 80%;
-}
-
-p {
-    margin: var(--gutter);
-}
-  
-footer {
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    height: var(--footer-height);
-    display: flex;
-    justify-content: flex-end;
-    background-color: var(--color3);
-    box-shadow: var(--shadow);
 }
   
   @keyframes pulse {

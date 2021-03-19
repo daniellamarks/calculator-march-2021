@@ -7,18 +7,20 @@ const result = document.getElementById('result');
 
 export function handleResultClick() {
     const operation = document.getElementById('operator-selector').selectedIndex;
+    const value1 = Number(input1.value);
+    const value2 = Number(input2.value);
     switch (operation) {
         case 0: 
-            result.textContent = add(Number(input1.value), Number(input2.value)); 
+            result.textContent = add(value1, value2); 
             break;
         case 1:
-            result.textContent = subtract(Number(input1.value), Number(input2.value)); 
+            result.textContent = subtract(value1, value2); 
             break;
         case 2:
-            result.textContent = multiply(Number(input1.value), Number(input2.value));
+            result.textContent = multiply(value1, value2);
             break;
         case 3:
-            result.textContent = divide(Number(input1.value), Number(input2.value));
+            result.textContent = divide(value1, value2);
             break;
         default:
             result.textContent = "Please input numbers!";

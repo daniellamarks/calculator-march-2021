@@ -14,23 +14,20 @@
 
 <body>
   <header >
-      <span class="typewriter">input numbers and click an operator button to calculate!</span>
+      <span class="typewriter">input numbers, choose an operator,and click to calculate!</span>
   </header>
     <main>
         <section class="main-section">
-            <div class ="inputs"> 
-                <input type="number" id="input-1" placeholder="input 1st number"/>
-               <span class="operator"></span>
-               <input type="number" id="input-2" placeholder="input 2nd number"/>
-            </div>
-            <div class="buttons">
-               <button id="add-button">+</button>
-               <button id="subtract-button">-</button>
-               <button id="multiply-button">*</button>
-               <button id="divide-button">/</button>
-            </div>
-            <div id="answer" class="answer"></div>
-            <button id="clear">clear</button>
+            <input id="input-1">
+            <select id="operator-selector">
+                <option value="addOption">+</option>
+                <option value="subtractOption">-</option>
+                <option value="multiplyOption">*</option>
+                <option value="divideOption">/</option>
+            </select>
+            <input id="input-2">
+            <button id="equals-button">=</button>
+            <span id="result"></span>
         </section>
     </main>
 

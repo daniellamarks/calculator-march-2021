@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { add, subtract, multiply, divide } from ./utils.js
+import { add, subtract, multiply, divide } from "./utils.js";
 
 const input1 = document.getElementById('input-1');
 const input2 = document.getElementById('input-2');
@@ -37,7 +37,7 @@ divideButton.addEventListener('click', () => {
     display1.textContent = quotient;    
 });
 
-const clearButton = document.getElementById("clear")
+const clearButton = document.getElementById('clear')
 
 clearButton.addEventListener('click', () => {
     input1.value = '';
